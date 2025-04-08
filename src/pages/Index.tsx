@@ -1,12 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useEffect } from 'react';
+import Hero from '@/components/Hero';
+import AboutUs from '@/components/AboutUs';
+import FeaturedPerfumes from '@/components/FeaturedPerfumes';
+import Testimonials from '@/components/Testimonials';
+import ContactSection from '@/components/ContactSection';
+import Footer from '@/components/Footer';
 
 const Index = () => {
+  useEffect(() => {
+    // Update page title
+    document.title = "SCENT ZONE PERFUMES | Luxury Fragrances";
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen overflow-x-hidden">
+      <Hero />
+      <AboutUs />
+      <FeaturedPerfumes />
+      <Testimonials />
+      <ContactSection />
+      <Footer />
     </div>
   );
 };
