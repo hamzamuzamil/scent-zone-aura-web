@@ -15,21 +15,22 @@ const Hero: React.FC = () => {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <img 
-          src="https://images.unsplash.com/photo-1610072625303-8e5a3a9f8e0e" 
+          src="https://images.unsplash.com/photo-1610072625303-8e5a3a9f8e0e?q=80&w=1974&auto=format&fit=crop" 
           alt="Luxury Perfume" 
-          className="w-full h-full object-cover animate-zoom brightness-[0.4]" 
+          className="w-full h-full object-cover animate-zoom brightness-[0.3]" 
         />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background"></div>
       </div>
       
       <div className="container-custom relative z-10 text-center px-4">
         <AnimatedSection animation="fade-in" delay={0.2}>
-          <p className="text-primary uppercase tracking-[0.2em] mb-4">Scent Zone Perfumes</p>
+          <p className="text-primary uppercase tracking-[0.2em] mb-4 text-sm md:text-base">Scent Zone Perfumes</p>
         </AnimatedSection>
         
         <AnimatedSection animation="slide-up" delay={0.4}>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-shadow">
             Redefining Fragrance. <br className="hidden md:block" />
-            <span className="text-primary">Redefining You.</span>
+            <span className="gold-gradient-text">Redefining You.</span>
           </h1>
         </AnimatedSection>
         
@@ -39,7 +40,7 @@ const Hero: React.FC = () => {
           </p>
         </AnimatedSection>
         
-        <AnimatedSection animation="fade-in" delay={0.8}>
+        <AnimatedSection animation="zoom-in" delay={0.8}>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <button 
               onClick={() => scrollToSection('featured')} 
@@ -55,10 +56,21 @@ const Hero: React.FC = () => {
             </button>
           </div>
         </AnimatedSection>
+
+        <AnimatedSection animation="fade-in" delay={1.2} className="mt-10">
+          <div className="inline-block p-3 border border-primary/20 rounded-full animate-float">
+            <div className="p-2 bg-primary/10 rounded-full">
+              <img src="https://images.unsplash.com/photo-1593740268100-8a6990d7cd3e?q=80&w=300&auto=format&fit=crop" 
+                alt="Premium perfume" 
+                className="w-16 h-16 rounded-full object-cover" 
+              />
+            </div>
+          </div>
+        </AnimatedSection>
       </div>
       
       <div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer animate-bounce"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer animate-bounce z-10"
         onClick={() => scrollToSection('about')}
       >
         <ArrowDown className="text-primary" size={32} />
